@@ -129,6 +129,25 @@ class TextScanner:
                  continue
         return self.parse_sentences_with_jieba(booktext)
 
+    def get_text_normal_file(self, rel_path):
+        with open(rel_path, 'r') as file:
+            return re.split("[。，！？]",file.read().replace('\n', '').strip())
+
+    def get_text_srt(self, rel_path):
+        with open(rel_path, 'r') as file:
+            lines = file.readlines()
+            real_lines = []
+            after_empty = 0
+            for line in lines:
+                if line == "\n":
+                    after_empty = 0
+                    continue
+                if after_empty >= 2:
+                    real_lines.append(line.replace('\n','').strip())
+                after_empty += 1
+            print(real_lines)
+            return real_lines
+        
 
     def parse_single_file_to_dict(self, rel_path, encoding="utf-8"):
         #https://stackoverflow.com/questions/3114786/python-library-to-extract-epub-information/3114929
