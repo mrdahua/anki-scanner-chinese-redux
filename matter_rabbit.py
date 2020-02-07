@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from chinese.database import Dictionary
 from chinese.config import ConfigManager
 from chinese.mr_text_scanner import TextScanner
@@ -17,7 +20,7 @@ print("\nStarting\n")
 
 #anki inputs
 #anki_dedupe_file_path = './text-files/hsk_words.anki2'
-anki_dedupe_file_path = "/home/kris/.local/share/Anki2/User 1/collection.anki2"
+anki_dedupe_file_path = '/Users/racarr/Library/Application Support/Anki2/User 1/collection.anki2'
 field_indices_to_use_in_anki_note = [0,1]
 anki_tags_to_exclude = ["HSK6","exclude_from_dedupes","imported_from_流浪地球"]
 
@@ -33,6 +36,7 @@ output_deck_name = tag_for_cards
 text_to_scan, file_or_dir = './text-files/liulangdiqiu_liucixin.txt', 'file'
 
 # setup
+
 dictionary = Dictionary()
 anki_db_path = join(dirname(realpath(__file__)),anki_dedupe_file_path)
 sc = TextScanner(dictionary, anki_db_path, field_indices_to_use_in_anki_note, anki_tags_to_exclude)
