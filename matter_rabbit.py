@@ -33,7 +33,7 @@ output_deck_name = tag_for_cards
 #text input
 #text_to_scan, file_or_dir = './text-files/diqitian/', 'dir'
 #text_to_scan, file_or_dir = './text-files/santisanbuqu_liucixin.txt', 'file'
-text_to_scan, file_or_dir = './text-files/elcristal.srt', 'file'
+text_to_scan, file_or_dir = './text-files/liulangdiqiu_liucixin.txt', 'file'
 
 # setup
 

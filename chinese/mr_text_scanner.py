@@ -145,7 +145,6 @@ class TextScanner:
                 if after_empty >= 2:
                     real_lines.append(line.replace('\n','').strip())
                 after_empty += 1
-            print(real_lines)
             return real_lines
         
 
