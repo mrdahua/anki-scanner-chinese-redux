@@ -7,7 +7,7 @@
     "textScanner": {
         "anki_db_path":{
             "doc": "Path to the anki2 db file, or to any anki2 file such as from an unzipped .apkg file",
-            "val":"../../User 1/collection.anki2"
+            "val":"/Users/racarr/Library/Application Support/Anki2/User 1/collection.anki2"
         },
         "anki_db_field_indices":{
             "doc": "These are the field indices that will be checked in the anki notes table for existing words",
